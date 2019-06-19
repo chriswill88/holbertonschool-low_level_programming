@@ -9,7 +9,7 @@ int main(void)
 	int n;
 
 	n = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
-
+	n -= 1;
 	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", n);
 	return (1);
 }
