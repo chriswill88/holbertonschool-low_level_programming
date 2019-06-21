@@ -5,13 +5,13 @@
 */
 int main(void)
 {
-        int alpha = 0;
+	int alpha = 0;
 
-        while (alpha <= 9)
-        {
-                putchar((alpha) + '0');
-                alpha++;
-        }
-        putchar('\n');
-        return (0);
+	while (alpha <= 9)
+	{
+		putchar((alpha) + '0');
+		alpha++;
+	}
+	putchar('\n');
+	return (0);
 }
