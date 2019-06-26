@@ -5,18 +5,14 @@
 * main - prints if a number is 0, positive, or negative
 * Return: 0
 */
-int positive_or_negative(void)
+int positive_or_negative(int i)
 {
-	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n == 0)
-		printf("%d is zero", n);
-	else if (n < 0)
-		printf("%d is negative", n);
-	else if (n > 0)
-		printf("%d is positive", n);
+	if (i == 0)
+		printf("%d is zero", i);
+	else if (i < 0)
+		printf("%d is negative", i);
+	else if (i > 0)
+		printf("%d is positive", i);
 	putchar('\n');
 	return (0);
 }
