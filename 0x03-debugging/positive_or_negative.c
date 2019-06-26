@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* main - prints if a number is 0, positive, or negative
+* positive_or_negative - prints if a number is 0, positive, or negative
+* @i: number to be checked
 * Return: 0
 */
 int positive_or_negative(int i)
