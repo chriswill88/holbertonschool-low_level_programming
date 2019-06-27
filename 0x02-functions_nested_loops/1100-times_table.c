@@ -2,7 +2,6 @@
 #include <stdio.h>
 /**
 * times_table - prints time tables
-* @n: the number to multiply to
 * Return: void;
 */
 void print_times_table(int n)
@@ -19,9 +18,9 @@ void print_times_table(int n)
 			total = rows * columns;
 			if ((total / 10) < 1 && rows <= n && rows > 0)
 			{
-				_putchar(' ');
+				//_putchar(' ');
 			}
-			if (total < 100 && rows > 0)
+			if (total < 100)
 			{
 				_putchar(' ');
 			}
