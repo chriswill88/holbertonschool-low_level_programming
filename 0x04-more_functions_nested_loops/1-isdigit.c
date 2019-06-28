@@ -1,15 +1,15 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
-* _isupper - checks for upper case
+* _isdigit - checks for digits
 * @c: the ascii for a character
 * Return: 1 if finds a uppercase or 0
 */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	char a = 'A';
+	int a = '0';
 
-	while (a <= 'Z')
+	while (a <= '9')
 	{
 		if (c == a)
 			return (1);
