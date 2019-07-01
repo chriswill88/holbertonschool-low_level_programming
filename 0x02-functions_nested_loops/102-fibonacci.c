@@ -2,7 +2,9 @@
 
 int main()
 {
-	long int n, fib = 0, prev = 0, next = 0;
+	long int n, fib = 0, prev = 1, next = 2;
+
+	printf ("%d\n", 1);
 
 	for (n = 0; n < 50; n++)
 	{
@@ -12,9 +14,5 @@ int main()
 			prev = fib;
 		fib = prev + next;
 		printf("%ld\n", fib);
-		if (fib == 0)
-			next = 1;
-		if (fib == 1)
-			printf("%d\n", 1);
 	}
 }
