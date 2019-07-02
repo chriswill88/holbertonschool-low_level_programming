@@ -9,7 +9,7 @@ void rev_string(char *s)
 	char *end = s;
 	char *beg = s;
 	char temp;
-	int n = 0, i = 0;
+	int n = 0, i = 0, x;
 
 
 	while (*end != '\0')
@@ -19,7 +19,11 @@ void rev_string(char *s)
 	}
 	end--;
 	n--;
-	while (*beg != '\0' && i < n / 2)
+	if (n % 2 == 1)
+		x = (n + 1) / 2;
+	else
+		x = n / 2;
+	while (*beg != '\0' && i < x)
 	{
 		temp = *beg;
 		*beg = *end;
