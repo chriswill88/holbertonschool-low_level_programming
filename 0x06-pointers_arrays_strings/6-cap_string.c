@@ -6,9 +6,11 @@
 */
 char *cap_string(char *a)
 {
-	char *seperator = " ,;.!?\"()\t\n{}";
+	char *seperator = ", ; . ! ? \" ( ) \t \n { }";
 	int i, n = 0;
 
+	if (a[0] >= 'a' && a[0] <= 'z')
+		a[0] -= 32;
 	while (a[n] != '\0')
 	{
 		for (i = 0; seperator[i] != '\0'; i++)
