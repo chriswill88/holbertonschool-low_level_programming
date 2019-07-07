@@ -15,8 +15,6 @@ char *cap_string(char *a)
 		{
 			if (seperator[i] == a[n])
 			{
-				if (a[n] == '\t')
-					a[n] = ' ';
 				if (a[n + 1] >= 'a' && a[n + 1] <= 'z')
 				{
 					n++;
