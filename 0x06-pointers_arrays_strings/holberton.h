@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+char *rot13(char *a);
 char *leet(char *a);
 char *cap_string(char *a);
 char *string_toupper(char *a);
