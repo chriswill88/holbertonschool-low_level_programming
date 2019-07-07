@@ -6,7 +6,7 @@
 */
 char *cap_string(char *a)
 {
-	char *seperator = "\n \t ,;.!?\"(){}";
+	char *seperator = " ,;.!?\"()\t\n{}";
 	int i, n = 0;
 
 	while (a[n] != '\0')
@@ -15,6 +15,8 @@ char *cap_string(char *a)
 		{
 			if (seperator[i] == a[n])
 			{
+				if (a[n] == '\t')
+					a[n] = ' ';
 				if (a[n + 1] >= 'a' && a[n + 1] <= 'z')
 				{
 					n++;
