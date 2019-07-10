@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* print_diagsums - prints the sum of the diagnals 
+* print_diagsums - prints the sum of the diagnals
 * @a: the pointer to an array of an array of ints
 * @size: the size of the array of arrays and the array of ints
 * Return: void
