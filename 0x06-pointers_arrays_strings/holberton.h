@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+void print_number(int n);
 char *rot13(char *a);
 char *leet(char *a);
 char *cap_string(char *a);
