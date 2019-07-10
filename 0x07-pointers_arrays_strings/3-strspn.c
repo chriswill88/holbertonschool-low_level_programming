@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
-*
-*
-*
-*
+* _strspn - finds the number first initial bytes in a string that match
+* @s: the stirng
+* @accept: the matching chars
+* Return: the number of bytes
 */
 
 unsigned int _strspn(char *s, char *accept)
@@ -12,16 +12,17 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s != '\0')
 	{
-		for (i = 0; *(accept + i) != '\0'; i++)
+		i = 0;
+		for (; *(accept + i) != '\0'; i++)
 		{
 			if (*(accept + i) == *s)
 			{
 				n++;
 				break;
 			}
-			if (*(accept + i) == '\0')
-				return (n);
 		}
+		if (*(accept + i) == '\0')
+			return (n);
 		s++;
 	}
 	return (n);
