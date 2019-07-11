@@ -10,7 +10,7 @@ int _sqrty(int n, int index)
 
 	if (n < 0)
 		return (-1);
-	if (index < n)
+	if (index <= n)
 	{
 		if ((index * index) == n)
 			return (index);
