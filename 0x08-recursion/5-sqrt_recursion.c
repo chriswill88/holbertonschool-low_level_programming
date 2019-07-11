@@ -26,5 +26,5 @@ int _sqrty(int n, int index)
 */
 int _sqrt_recursion(int n)
 {
-	return (_sqrty(n, 1));
+	return (_sqrty(n, 0));
 }
