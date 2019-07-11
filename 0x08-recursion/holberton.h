@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 int _strlen_recursion(char *s);
+int factorial(int n);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
 void set_string(char **s, char *to);
