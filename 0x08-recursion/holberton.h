@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int _pow_recursion(int x, int y);
 int _strlen_recursion(char *s);
 int factorial(int n);
 void _print_rev_recursion(char *s);
