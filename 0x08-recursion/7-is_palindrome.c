@@ -23,7 +23,7 @@ int _strlen_recursion(char *s)
 * Return: 0 or 1
 */
 int pal(char *s, int i, int n)
-{	
+{
 	if (i >= 0)
 	{
 		if (s[i] != s[n])
