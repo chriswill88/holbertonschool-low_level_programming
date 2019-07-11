@@ -40,7 +40,7 @@ int is_palindrome(char *s)
 	int i;
 
 	i = _strlen_recursion(s);
-	if (i == 0)
+	if (i == 0 || *s == '\0')
 		return (1);
 	return (pal(s, i - 1, 0));
 }
