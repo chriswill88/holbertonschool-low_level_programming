@@ -23,12 +23,14 @@ int _strlen_recursion(char *s)
 * Return: 0 or 1
 */
 int pal(char *s, int i, int n)
-{
-	if (s[i] != s[n])
-		return (0);
-	if (i >= n)
-		return (1);
-	return (pal(s, i--, n++));
+{	
+	if (i >= 0)
+	{
+		if (s[i] != s[n])
+			return (0);
+		return (pal(s, i - 1, n + 1));
+	}
+	return (1);
 }
 /**
 * is_palindrome - finds palindrome
