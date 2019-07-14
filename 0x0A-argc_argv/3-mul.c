@@ -8,7 +8,7 @@
 */
 int main(int argc, char **argv)
 {
-	int i = 0, n = 0, results = 0, place = 1, x = 0, place1 = 1;
+	int z, y, i = 0, n = 0, results = 0, place = 1, x = 0, place1 = 1;
 
 	if (argc != 3)
 	{
@@ -32,7 +32,11 @@ int main(int argc, char **argv)
 				if (argv[2][n] == '-')
 					results *= -1;
 				else
-					results += ((argv[1][i] - '0') * place1) * ((argv[2][n] - '0') * place);
+				{
+					z = ((argv[1][i] - '0') * place1);
+					y = ((argv[2][n] - '0') * place);
+					results +=  z * y;
+				}
 				place *= 10;
 			}
 		}
