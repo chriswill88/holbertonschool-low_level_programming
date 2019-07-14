@@ -24,23 +24,21 @@ int main(int argc, char **argv)
 		if (argv[1][i] == '-')
 		{
 			results *= -1;
-			i--;
-			break;
 		}
-		for (n = x; n >= 0; n--)
+		else
 		{
-			if (argv[2][n] == '-')
+			for (n = x; n >= 0; n--)
 			{
-				n--;
-				results *= -1;
-				break;
+				if (argv[2][n] == '-')
+					results *= -1;
+				else
+					results += ((argv[1][i] - '0') * place1) * ((argv[2][n] - '0') * place);
+				place *= 10;
 			}
-			results += ((argv[1][i] - '0') * place1) * ((argv[2][n] - '0') * place);
-			place *= 10;
 		}
 		place1 *= 10;
 		i--;
 	}
 	printf("%d\n", results);
-	return (results);
+	return (0);
 }
