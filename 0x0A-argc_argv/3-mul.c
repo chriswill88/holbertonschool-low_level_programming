@@ -8,7 +8,7 @@
 */
 int main(int argc, char **argv)
 {
-	int z = 0, y = 0, i = 0, n = 0, results = 0, place = 1, place1 = 1, x = 0;
+	int i = 0, n = 0, results = 0, place = 1, place1 = 1, x = 0;
 
 	if (argc != 3)
 	{
