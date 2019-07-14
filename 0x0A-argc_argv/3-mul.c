@@ -42,5 +42,5 @@ int main(int argc, char **argv)
 		i--;
 	}
 	printf("%d\n", results);
-	return (results);
+	return (0);
 }
