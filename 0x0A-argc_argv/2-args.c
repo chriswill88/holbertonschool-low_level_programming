@@ -5,22 +5,13 @@
 * @argv: the arrguments
 * Return: 0
 */
-int main(int argc, char **argv)
+int main(int argc __attribute__((unused)), char **argv)
 {
-	int i = 0, n = 0, results = 0;
+	int i = 0;
 
-	if (argv != 2)
+	while (argv[i] != NULL)
 	{
-		printf("Error\n")
-		return (1);
+		printf("%s\n", argv[i++]);
 	}
-
-	while (argv[0][i] != '\0')
-	{
-		argv[0][i++]);
-		for (n = 0; argv[1][n] != '\0'; n++)
-			results += argv[1][n] * argv[2][i];
-	}
-	printf("%d", results);
-	return (1);
+	return (0);
 }
