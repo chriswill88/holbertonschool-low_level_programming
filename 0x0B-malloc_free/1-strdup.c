@@ -27,7 +27,6 @@ char *_strdup(char *str)
 	}
 	if (i != n)
 	{
-		free (NULL);
 		return (NULL);
 	}
 	return (ptr);
