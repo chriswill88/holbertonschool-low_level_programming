@@ -15,15 +15,20 @@ char *_strdup(char *str)
 
 	while (str[i] != '\0')
 		i++;
-
+	i++;
 	ptr = malloc(i);
 	if (ptr == NULL)
 		return (NULL);
 
 	while (i > n)
-		ptr[n++] = *str++;
-
+	{
+		ptr[n] = *str++;
+		n++;
+	}
 	if (i != n)
+	{
+		free (NULL);
 		return (NULL);
+	}
 	return (ptr);
 }
