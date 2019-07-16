@@ -3,31 +3,36 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, n = 0, space;
+	int i = 0, n = 0, space = 0, s1c = 0, count = 0;
 	char *ptr, *start;
+
+	if (s1 == NULL)
+		*s1 = '\0';
+	if (s2 == NULL)
+		*s2 = '\0';
 
 	while (s1[i] != '\0')
 		i++;
 	while (s2[n] != '\0')
 		n++;
-	
+
 	space = n + i;
 	ptr = malloc(space);
-	start = ptr;
-
 	if (ptr == NULL)
 		return (NULL);
-
-	i = 0;
-	while (i < space)
+	start = ptr;
+	while (count < space + 1)
 	{
-		if (*s1 != '\0')
-			*ptr++ = *s1++;
+		if (i > s1c)
+		{
+			*ptr++ = s1[s1c];
+			s1c++;
+		}
 		else if (*s2 != '\0')
 			*ptr++ = *s2++;
-		else
-			*ptr++ = '\0';
-		i++;
+		count++;
 	}
+	*ptr = *s2;
+	printf("%d", count);
 	return (start);
 }
