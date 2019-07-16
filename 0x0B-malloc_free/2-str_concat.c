@@ -4,7 +4,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i = 0, n = 0, space;
-	char *ptr;
+	char *ptr, *start;
 
 	while (s1[i] != '\0')
 		i++;
@@ -13,6 +13,7 @@ char *str_concat(char *s1, char *s2)
 	
 	space = n + i;
 	ptr = malloc(space);
+	start = ptr;
 
 	if (ptr == NULL)
 		return (NULL);
@@ -28,5 +29,5 @@ char *str_concat(char *s1, char *s2)
 			*ptr++ = '\0';
 		i++;
 	}
-	return (ptr);
+	return (start);
 }
