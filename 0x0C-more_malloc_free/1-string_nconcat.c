@@ -28,14 +28,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
-		size = i + n;
+		size = i + n + 1;
 	/*	printf("else ::: x = %d : size = %d\n", x, size);*/
 	}
 	cc = malloc(size);
 	if (cc == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size && *s2; i++)
 	{
 		if (*s1)
 			cc[i] = *s1++;
