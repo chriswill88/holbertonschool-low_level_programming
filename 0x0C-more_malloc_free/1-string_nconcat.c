@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		else if (*s2)
 			cc[i] = *s2++;
 	}
-	//cc[size] = '\0';
+	/*cc[size] = '\0';*/
 
 	return (cc);
 }
