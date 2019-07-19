@@ -33,7 +33,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		else if (*s2)
 			cc[i] = *s2++;
 	}
-	cc[i] = '\0';
-
+	while (i < size)
+	{
+		cc[i] = '\0';
+		i++;
+	}
 	return (cc);
 }
