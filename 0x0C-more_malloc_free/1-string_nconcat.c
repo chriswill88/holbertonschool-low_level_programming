@@ -23,12 +23,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= x)
 	{
-		size = i + x;
+		size = i + x + 1;
 	/*	printf("n >= x ::: x = %d : size = %d\n", x, size);*/
 	}
 	else
 	{
-		size = i + n + 1;
+		size = i + n;
 	/*	printf("else ::: x = %d : size = %d\n", x, size);*/
 	}
 	cc = malloc(size);
