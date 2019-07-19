@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <limits.h>
 
-
+char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *malloc_checked(unsigned int b);
 int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
