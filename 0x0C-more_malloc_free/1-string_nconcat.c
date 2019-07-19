@@ -21,16 +21,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[x])
 		x++;
 
-	if (n >= x)
-	{
-		size = i + x + 1;
-	/*	printf("n >= x ::: x = %d : size = %d\n", x, size);*/
-	}
-	else
-	{
-		size = i + n + 1;
-	/*	printf("else ::: x = %d : size = %d\n", x, size);*/
-	}
+	size = i + n + 1;
 	cc = malloc(size);
 	if (cc == NULL)
 		return (NULL);
