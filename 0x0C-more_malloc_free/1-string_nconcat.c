@@ -9,7 +9,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cc;
-	int i = 0, size;
+	unsigned int i = 0, x = 0, size;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -18,23 +18,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	while (s1[i])
 		i++;
+	while (s2[x])
+		x++;
 
-	size = i + n + 1;
-	
+	if (n >= x)
+	{
+		size = i + x;
+	/*	printf("n >= x ::: x = %d : size = %d\n", x, size);*/
+	}
+	else
+	{
+		size = i + n + 1;
+	/*	printf("else ::: x = %d : size = %d\n", x, size);*/
+	}
 	cc = malloc(size);
 	if (cc == NULL)
 		return (NULL);
-	
+
 	for (i = 0; i < size; i++)
 	{
 		if (*s1)
 			cc[i] = *s1++;
 		else if (*s2)
 			cc[i] = *s2++;
-		else
-			cc[i] = '\0';
 	}
-	
 	cc[size] = '\0';
 
 	return (cc);
