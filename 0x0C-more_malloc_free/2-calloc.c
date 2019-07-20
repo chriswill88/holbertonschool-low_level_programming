@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * _calloc - allocates memory for an array
-* @nemb: number of elements
+* @nmemb: number of elements
 * @size: size of type
 * Return: pointer to memory allocation
 */
