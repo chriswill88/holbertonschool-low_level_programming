@@ -5,7 +5,7 @@
 * @argv: arguments
 * Returns: solution
 */
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int x, y, results = 0;
 
