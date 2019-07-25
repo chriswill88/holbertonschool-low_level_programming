@@ -8,6 +8,7 @@
 int main(int argc, char **argv)
 {
 	int x, y, results = 0;
+	int (*p)(int, int);
 
 	if (argc != 4)
 	{
@@ -23,13 +24,13 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(100);
 	}
-
-	results = (get_op_func(argv[2]))(x, y);
-	if (get_op_func(argv[2]) == NULL)
+	p = (get_op_func(argv[2]));
+	if (p == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	results = (p)(x, y);
 	printf("%d\n", results);
 	return (0);
 }
