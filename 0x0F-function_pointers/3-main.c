@@ -3,7 +3,7 @@
 * main - multiply, divid, add, subtract
 * @argc: number of arguments
 * @argv: arguments
-* Returns: solution
+* Return: 0
 */
 int main(int argc, char **argv)
 {
