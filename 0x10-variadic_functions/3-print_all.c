@@ -10,7 +10,6 @@ void print_all(const char * const format, ...)
 	char *cp;
 	va_list va;
 
-
 	va_start(va, format);
 	while (format && format[n])
 	{
