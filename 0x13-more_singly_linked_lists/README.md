@@ -1,0 +1,1 @@
+this readme is for the directory dealing with linked lists
