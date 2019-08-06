@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+* add_nodeint_end - adding a node to the end
+* @head: the linked list
+* @n: the int to add to the end
+* Return: the new node
+*/
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *ptr = *head, *new;

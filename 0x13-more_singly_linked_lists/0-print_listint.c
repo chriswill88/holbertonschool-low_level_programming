@@ -1,5 +1,9 @@
 #include "lists.h"
-
+/**
+* print_listint - prints a linked list
+* @h: a linked list
+* Return: the number of elements
+*/
 size_t print_listint(const listint_t *h)
 {
 	int i = 0;
@@ -10,5 +14,5 @@ size_t print_listint(const listint_t *h)
 		i++;
 		h = h->next;
 	}
-	return(i);
+	return (i);
 }
