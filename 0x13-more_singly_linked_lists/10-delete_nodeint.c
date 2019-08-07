@@ -20,7 +20,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	while (index > 0)
 	{
-		printf("index == %d\n", index);
 		if (index > 1)
 			prev = prev->next;
 		ptr = ptr->next;
