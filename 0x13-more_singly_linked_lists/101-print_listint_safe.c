@@ -7,12 +7,12 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	void *a[9000];
-	const listint_t *ptr = head;
+	const listint_t *ptr;
 	int i = 0, n;
 
 	if (head == NULL)
 		exit(98);
-
+	ptr = head;
 	while (ptr != NULL && i < 900)
 	{
 		a[i] = (void *)ptr;
