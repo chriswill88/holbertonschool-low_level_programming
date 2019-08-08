@@ -33,6 +33,6 @@ int main(void)
     node->next = add_nodeint(&head, 98);
     add_nodeint(&head, 402);
     add_nodeint(&head, 1024);
-    print_listint_safe(head);
+    print_listint_safe(NULL);
     return (0);
 }
