@@ -16,10 +16,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	while ((unsigned long long int)i < n)
-	{
-		printf("the %lld\n", i);
 		i <<= 1;
-	}
 	while (i)
 	{
 		if (n & i)
