@@ -2,7 +2,6 @@
 #define _HOLBERT_
 
 #include <stdio.h>
-#include <limits.h>
 
 
 void _putchar(char c);
