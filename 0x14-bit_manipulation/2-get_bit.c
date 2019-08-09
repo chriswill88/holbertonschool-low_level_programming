@@ -1,6 +1,9 @@
 #include "holberton.h"
 /**
- * 
+ * get_bit - get the bit at an index
+ * @n: the number thats unsigned
+ * @index: the bit
+ * Return: the bit at the index
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
