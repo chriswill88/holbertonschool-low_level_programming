@@ -9,10 +9,7 @@ void print_binary(unsigned long int n)
 	unsigned long long int i = 1, num = 0, o = 0;
 
 	if (n == 0)
-	{
 		_putchar('0');
-		return;
-	}
 	while (i < n && o < 63)
 	{
 		i <<= 1;
