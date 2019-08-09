@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 #include "holberton.h"
 
 /**
@@ -9,7 +8,7 @@
  */
 int main(void)
 {
-	print_binary(ULONG_MAX);
+	print_binary(2);
 	printf("\n");
 	return (0);
 }
