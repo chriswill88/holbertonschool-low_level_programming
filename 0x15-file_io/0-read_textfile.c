@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * read_textfile - read from a file and writes to stdout
+ * @filename: the name of the file
+ * @letters: the number of letters
+ * Return: the number of chars read and printed
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
