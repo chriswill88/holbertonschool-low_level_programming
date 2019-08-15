@@ -55,14 +55,11 @@ int main(int argc, char **argv)
 		rd = read(fd, buf, 1024);
 		if (rd == -1)
 			errnots(1, argv, fd);
-		if (buf[0])
-		{
-			wr = write(df, buf, rd);
-			if (wr == -1)
-				errnots(2, argv, fd);
-			if (wr < 1024)
-				break;
-		}
+		wr = write(df, buf, rd);
+		if (wr == -1)
+			errnots(2, argv, fd);
+		if (wr < 1024)
+			break;
 	}
 	if (close(df) == -1)
 		errnots(3, argv, df);
