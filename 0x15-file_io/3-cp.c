@@ -55,7 +55,8 @@ int main(int argc, char **argv)
 		rd = read(fd, buf, 1024);
 		if (rd == -1)
 			errnots(1, argv, fd);
-
+		if (rd == 0)
+			break;
 		if (buf[0])
 		{
 			wr = write(df, buf, rd);
