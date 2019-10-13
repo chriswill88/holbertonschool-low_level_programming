@@ -8,11 +8,13 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idx = key_index((const unsigned char *)key, ht->size);
-	hash_node_t **ary = ht->array, *new, *ptr;
+	unsigned long int idx;
+	hash_node_t **ary, *new, *ptr;
 
-	if (key == NULL || strlen(key) == 0 || !ht)
+	if (key == NULL || strlen(key) == 0 || ht == NULL)
 		return (0);
+	idx = key_index((const unsigned char *)key, ht->size);
+	ary = ht->array;
 	if (!ary[idx])
 	{
 		ary[idx] = malloc(sizeof(hash_node_t));
@@ -28,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (ptr)
 		{
 /*string compare for whether to create a new node or just update a key*/
-			if (strcmp(key, ptr->key))
+			if (!strcmp(key, ptr->key))
 			{
 				free(ptr->value);
 				ptr->value = strdup(value);
@@ -46,3 +48,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
+
