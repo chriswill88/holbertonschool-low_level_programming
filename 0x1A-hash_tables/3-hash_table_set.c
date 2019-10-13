@@ -30,6 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 /*string compare for whether to create a new node or just update a key*/
 			if (strcmp(key, ptr->key))
 			{
+				free(ptr->value);
 				ptr->value = strdup(value);
 				return (1);
 			}
