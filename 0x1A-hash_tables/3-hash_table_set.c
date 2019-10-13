@@ -29,7 +29,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 /*string compare for whether to create a new node or just update a key*/
 			if (strcmp(key, ptr->key))
+			{
 				ptr->value = strdup(value);
+				return (1);
+			}
 			ptr = ptr->next;
 		}
 		new = malloc(sizeof(hash_node_t));
