@@ -9,6 +9,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int idx = 0, counter = 0;
 	hash_node_t **ptr, *node;
 
+	if (ht == NULL)
+		return;
 	printf("{");
 	ptr = ht->array;
 	while (idx < ht->size)
