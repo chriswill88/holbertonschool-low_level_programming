@@ -6,9 +6,9 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *ptr = *list, *a = ptr, *insert;
+	listint_t *ptr = *list, *a, *insert;
 
-	if (!list || !*list)
+	if (!list || !(*list))
 		return;
 
 	while (ptr->next)
