@@ -7,7 +7,7 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *ptr = *list, *a = ptr, *insert;
-	
+
 	if (!list || !*list)
 		return;
 
