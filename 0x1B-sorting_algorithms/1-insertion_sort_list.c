@@ -7,9 +7,10 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *ptr = *list, *a = ptr, *insert;
-
+	
 	if (!list || !*list)
 		return;
+
 	while (ptr->next)
 	{
 		a = ptr->next;
@@ -64,7 +65,8 @@ void switchy(listint_t **list, listint_t *a, listint_t *insert, int n)
 	if (n == 2)
 	{
 		a->next = insert->next;
-		insert->next->prev = a;
+		if (insert->next)
+			insert->next->prev = a;
 		insert->next = a;
 		a->prev = insert;
 		insert->prev = NULL;
