@@ -6,11 +6,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *ptr = *list, *a, *insert;
+	listint_t *ptr, *a, *insert;
 
 	if (!list || !(*list))
 		return;
-
+	ptr = *list;
 	while (ptr->next)
 	{
 		a = ptr->next;
