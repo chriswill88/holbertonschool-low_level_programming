@@ -26,6 +26,9 @@ void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
 void switchy(listint_t **list, listint_t *a, listint_t *insert, int n);
 void selection_sort(int *array, size_t size);
-
+void quick_sort(int *array, size_t size);
+int part(int *arr, size_t hi, size_t lo, size_t size);
+void quicksort(int *arr, size_t hi, size_t lo, size_t size);
+void shell_sort(int *array, size_t size);
 
 #endif
