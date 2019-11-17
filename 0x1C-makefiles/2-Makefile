@@ -2,14 +2,17 @@
 
 CC = gcc
 SRC = holberton.c main.c
-OBJ = holberton.o main.o
+OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 
 all: $(NAME)
 
-$(NAME): $(OBJ) m.h
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-$(OBJ): $(SRC)
-	$(CC) -c -o holberton.o holberton.c
-	$(CC) -c -o main.o main.c
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
+
+# $< - the first prerequisite
+# $@ - the name of the file being generated
+# line 5 uses % - it allows for all the .c files to be manipulated so that theres a .o instead.
