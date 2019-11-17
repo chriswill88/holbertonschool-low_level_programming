@@ -17,7 +17,7 @@ $(NAME): $(OBJ)
 re: oclean all
 
 clean:
-	$(RM) -f *~ holberton
+	$(RM) -f *~ $(NAME)
 
 oclean:
 	$(RM) -f $(OBJ)
