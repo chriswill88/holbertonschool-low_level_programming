@@ -10,8 +10,6 @@ all: $(NAME)
 $(NAME): $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
-holberton.o: holberton.c
+$(OBJ): $(SRC)
 	$(CC) -c -o holberton.o holberton.c
-
-main.o: main.c
 	$(CC) -c -o main.o main.c
