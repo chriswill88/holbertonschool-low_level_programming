@@ -1,0 +1,28 @@
+# -*- MakeFile -*-
+
+CC = gcc $(CFLAGS)
+SRC = holberton.c main.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
+undefine RM 
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(NAME) m.h
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+re: oclean all
+
+clean:
+	$(RM) -f *~ $(NAME)
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean: clean oclean
+
+
+# $< - the first prerequisite
+# $@ - the name of the file being generated
+# line 5 uses % - it allows for all the .c files to be manipulated so that theres a .o instead.
