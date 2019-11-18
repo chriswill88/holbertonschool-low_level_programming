@@ -7,9 +7,9 @@ NAME = holberton
 undefine RM 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(NAME) m.h
+all: m.h $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): m.h
 	$(CC) -o $@ $^
 
 re: oclean all
