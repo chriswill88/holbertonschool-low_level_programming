@@ -23,6 +23,5 @@ size_t _lambda4(const binary_tree_t *node, size_t n)
 		_lambda4(node->left, n += 1);
 	if (node->right)
 		_lambda4(node->right, n += 1);
-	
 	return (n);
 }
