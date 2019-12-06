@@ -7,13 +7,13 @@
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	if (tree)
-		return (_lambda4(tree, 0)) - 1;
+		return (_lambda4(tree, 0) - 1);
 	return (0);
 }
 
 /**
  * _lambda4 - gets height
- * @tree: returns size
+ * @node: returns size
  * @n: size to return
  * Return: height
  */
