@@ -28,6 +28,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 /**
  * perfect_return - returns if tree is perfect or not
  * @tree: the binary tree
+ * @height: the hight of the binary tree
  * Return: value corresponding to if tree is perfect
  */
 int perfect_return(const binary_tree_t *tree, int height)
