@@ -6,27 +6,33 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int x = 0, y = 0;
+	if (!tree)
+		return (1);
+	if (perfect_return(tree) == 0)
+		return (1);
+	return (0);
+}
+
+/**
+ * perfect_return - returns if tree is perfect or not
+ * @tree: the binary tree
+ * Return: value corresponding to if tree is perfect
+ */
+int perfect_return(const binary_tree_t *tree)
+{
+	int x = 0;
 
 	if (tree)
 	{
 		if (tree->right && tree->left)
 		{
-			if (tree->left->right && tree->left->left)
-				x -= 1;
 			x += binary_tree_is_perfect(tree->left);
-
-			if (tree->right->left && tree->right->right)
-				y -= 1;
-			y += binary_tree_is_perfect(tree->right);
+			x -= binary_tree_is_perfect(tree->right);
 		}
-		else if (!tree->left && !tree->right)
+		else if (!(tree->left) && !(tree->right))
 			return (1);
 		else
 			return (0);
-		/*printf("node->[%d] %dx - %dy = %d\n", tree->n, x, y, x - y);*/
 	}
-	if (!(x - y))
-		return (1);
-	return (0);
+	return (x);
 }
