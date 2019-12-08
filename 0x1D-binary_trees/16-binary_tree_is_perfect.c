@@ -8,7 +8,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (1);
-	if (perfect_return(tree) == 0)
+	if (perfect_return(tree) >= 0)
 		return (1);
 	return (0);
 }
@@ -22,17 +22,14 @@ int perfect_return(const binary_tree_t *tree)
 {
 	int x = 0;
 
-	if (tree)
+	if (tree->right && tree->left)
 	{
-		if (tree->right && tree->left)
-		{
-			x += binary_tree_is_perfect(tree->left);
-			x -= binary_tree_is_perfect(tree->right);
-		}
-		else if (!(tree->left) && !(tree->right))
-			return (1);
-		else
-			return (0);
+		x += binary_tree_is_perfect(tree->left);
+		x -= binary_tree_is_perfect(tree->right);
 	}
+	else if (!(tree->left) && !(tree->right))
+		return (1);
+	else
+		return (0);
 	return (x);
 }
