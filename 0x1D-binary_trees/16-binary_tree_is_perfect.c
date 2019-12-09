@@ -20,10 +20,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		}
 
 	/*printf("height = %d\n", i);*/
-	if ((perfect_return(tree, i)) == i)
+	if ((perfect_return(tree, i) - 1) == i)
 		return (1);
-	return (0);
-}
+	return (0);}
 
 /**
  * perfect_return - returns if tree is perfect or not
@@ -35,19 +34,18 @@ int perfect_return(const binary_tree_t *tree, int height)
 	int l = 0, r = 0;
 
 	/*printf("node - n = %d\n", tree->n);*/
+	if (!tree)
+		return (-1);
 
-	if (tree->right && tree->left)
+	if (tree->right || tree->left)
 	{
-		l += perfect_return(tree->left, height);
-		r += perfect_return(tree->right, height);
-	}
-	if (!tree->right && !tree->left)
-	{
-		l -= 1;
-		r -= 1;
+		l = perfect_return(tree->left, height);
+		r = perfect_return(tree->right, height);
 	}
 
 	/*printf("l = %d, r = %d, height %d\n", l, r, height);*/
+	if (l == -1 || r == -1)
+		return (-1);
 	if (l > r)
 		return (l + 1);
 	return (r + 1);
