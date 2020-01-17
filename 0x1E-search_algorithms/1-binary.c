@@ -1,7 +1,7 @@
 #include "search_algos.h"
 #include <unistd.h>
 #include <math.h>
-/*
+/**
  * binary_search - using binary search to find value in list
  * @array: the array of ints
  * @size: the size of the array
