@@ -13,7 +13,7 @@ int jump_search(int *array, size_t size, int value)
 
 	if (!array || !size)
 		return (-1);
-	/*printf("the sqrt = %ld\n--------------------\n", tsize);*/
+	printf("the sqrt = %ld size = %ld\n--------------------\n", tsize, size);
 	for (inx = 0; inx < size; inx += tsize)
 	{
 		printf("Value checked array[%ld] = [%d]\n", inx, array[inx]);
