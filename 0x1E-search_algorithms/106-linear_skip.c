@@ -38,7 +38,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			future = ptr->express;
 			fut_ind = future->index;
 			printf("Value checked at index [%ld] = [%d]\n", fut_ind, future->n);
-			if (future->n > value)
+			if (future->n >= value)
 			{
 				printf("Value found between indexes [%ld] and [%ld]\n", cur_ind, fut_ind);
 				found_area = 1;
