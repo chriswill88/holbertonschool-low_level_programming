@@ -51,4 +51,9 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 int perfect_return(const binary_tree_t *tree, int height);
 
+void binary_tree_print(const binary_tree_t *);
+void remover(heap_t *ptr);
+void extract(heap_t *rt);
+int heap_extract(heap_t **root);
+
 #endif /* _BINARY_TREES_H_ */
